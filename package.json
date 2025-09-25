@@ -4,10 +4,27 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
-    "ios": "react-native run-ios",
+    "ios": "npx react-native run-ios --simulator=\"iPhone 15\"",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+
+    "// ═════════════════════════════════════════════════════════════": "",
+    "// 🍎 iOS - DESARROLLO (solo macOS)": "",
+    "// ════════════════════════════════════════════════════════════════": "",
+    "ios-setup": "yarn run ios-uninstaller && yarn run ios-installer && yarn run refreshIOS",
+    "ios-installer": "yarn install && cd ios && pod setup && pod install --repo-update && pod update",
+    "ios-uninstaller": "watchman watch-del-all && yarn cache clean && rm -rf node_modules/ && rm -f yarn.lock && cd ios && rm -rf Pods Podfile.lock build assets main.jsbundle && pod deintegrate && rm -rf ~/Library/Caches/CocoaPods && rm -rf ~/Library/Developer/Xcode/DerivedData/*",
+    "ios-uninstaller-light": "yarn cache clean && rm -rf node_modules/ && rm -f yarn.lock && cd ios && rm -rf Pods Podfile.lock build assets main.jsbundle && pod deintegrate",
+    "build:ios": "npx react-native bundle --entry-file ./index.js --bundle-output ios/main.jsbundle --dev=false --platform='ios' --assets-dest='./ios'",
+
+    "// ════════════════════════════════════════════════════════════": "",
+    "// 🤖 ANDROID - DESARROLLO": "",
+    "// ═══════════════════════════════════════════════════════════": "",
+    "android-build-qa": "cd android && ./gradlew clean assembleRelease",
+    "android-build-prod": "cd android && ./gradlew clean bundleRelease",
+    "build:dev": "cd android && ./gradlew assembleRelease",
+    "clean": "yarn cache clean && cd ./android && ./gradlew clean",
   },
   "dependencies": {
     "@react-native-picker/picker": "github:react-native-picker/picker",
