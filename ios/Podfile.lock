@@ -1111,7 +1111,7 @@ PODS:
     - React-jsi (= 0.73.4)
     - React-logger (= 0.73.4)
     - React-perflogger (= 0.73.4)
-  - RNCPicker (2.6.1):
+  - RNCPicker (2.11.2):
     - React-Core
   - SocketRocket (0.6.1)
   - Yoga (1.14.0)
@@ -1369,7 +1369,7 @@ SPEC CHECKSUMS:
   React-runtimescheduler: ed48e5faac6751e66ee1261c4bd01643b436f112
   React-utils: 6e5ad394416482ae21831050928ae27348f83487
   ReactCommon: 840a955d37b7f3358554d819446bffcf624b2522
-  RNCPicker: b18aaf30df596e9b1738e7c1f9ee55402a229dca
+  RNCPicker: a00c4466b3cf97d8f97f68627fe12301a3609707
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Yoga: 1b901a6d6eeba4e8a2e8f308f708691cdb5db312
 

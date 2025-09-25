@@ -24,7 +24,7 @@
     "android-build-qa": "cd android && ./gradlew clean assembleRelease",
     "android-build-prod": "cd android && ./gradlew clean bundleRelease",
     "build:dev": "cd android && ./gradlew assembleRelease",
-    "clean": "yarn cache clean && cd ./android && ./gradlew clean",
+    "clean": "yarn cache clean && cd ./android && ./gradlew clean"
   },
   "dependencies": {
     "@react-native-picker/picker": "github:react-native-picker/picker",
